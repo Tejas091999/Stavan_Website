@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/Tejas091999/Stavan_Website.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building static website..."
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "No tests yet"
+            }
+        }
+
+        stage('Deploy (Local)') {
+            steps {
+                echo "Simulating deployment..."
+            }
+        }
+    }
+}
